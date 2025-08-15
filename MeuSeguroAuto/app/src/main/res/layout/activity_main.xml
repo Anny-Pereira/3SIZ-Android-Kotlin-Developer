@@ -1,47 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
     <FrameLayout
-        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
         <LinearLayout
             android:id="@+id/containerForm"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
-                android:textAllCaps="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/app_header_title"
-                android:textSize="22sp"
                 android:textAlignment="center"
-                android:textStyle="bold"/>
+                android:textAllCaps="true"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/app_header_subtitle"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
 
             <View
-                android:layout_marginVertical="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/black"/>
+                android:layout_marginVertical="16dp"
+                android:background="@color/black" />
 
             <EditText
+                android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:id="@+id/etName"
-                android:hint="@string/name_text"/>
+                android:hint="@string/name_text"
+                android:inputType="textPersonName" />
 
             <Spinner
                 android:id="@+id/spUf"
@@ -49,15 +50,93 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/spinner_uf" />
 
+
+            <RadioGroup
+                android:id="@+id/rgCoverage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbBasicCoverage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_option_basic_coverage_text" />
+
+                <RadioButton
+                    android:id="@+id/rbFullCoverage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_option_full_coverage_text" />
+            </RadioGroup>
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchSeguro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_third_party_insurance_text" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seekbar_vehicle_year_text" />
+
+            <SeekBar
+                android:id="@+id/sbYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+            <CheckBox
+                android:id="@+id/cbAcceptTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/checkbox_accept_terms_text" />
+
+
+            <Button
+                android:id="@+id/btSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/send_text" />
+
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/containerSummary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:background="?android:colorBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:contentDescription="@string/success_content_description"
+                android:src="@drawable/ic_sucess" />
+
+
+            <TextView
+                android:id="@+id/tvSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="Aqui será o sumário"
+            />
+            <!--tools é só para o ambiente em desenvolvimento-->
+            <Button
+                android:id="@+id/btBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/back_text" />
+
+
         </LinearLayout>
 
     </FrameLayout>
 
-    </ScrollView>
+</ScrollView>
