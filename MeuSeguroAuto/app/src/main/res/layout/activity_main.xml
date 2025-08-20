@@ -80,7 +80,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/seekbar_vehicle_year_text" />
+                android:text="@string/seekbar_vehicle_year_text"
+                android:id="@+id/tvYear"/>
 
             <SeekBar
                 android:id="@+id/sbYear"
