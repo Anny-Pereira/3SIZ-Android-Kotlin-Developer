@@ -1,14 +1,4 @@
 <resources>
     <string name="app_name">Gold Wise</string>
-    <string name="hint_quantity">Digite a
-quantidade</string>
-    <string name="hint_price">Digite o
-preço</string>
-    <string name="empty_fields">Preencha todos
-os campos</string>
-    <string name="label_result">Total
-R$%.2f</string>
-    <string
-        name="btn_calculate">Calcular</string>
-    <string name="btn_clear">Limpar</string>
+    <string name="total">R$ %.2f</string>
 </resources>
