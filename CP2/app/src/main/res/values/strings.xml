@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CP2Temperatura</string>
+    <string name="temp">Temperatura (°C)</string>
+    <string name="empty_field">Preencha este campo (°C)</string>
+    <string name="label_result_f">Resultado em Fahrenheit: %.2f ºF</string>
+    <string name="label_result_k">Resultado em Kelvin: %.2f ºK</string>
+    <string name="btn_converter">Converter</string>
+    <string name="btn_limpar">Limpar</string>
+</resources>
