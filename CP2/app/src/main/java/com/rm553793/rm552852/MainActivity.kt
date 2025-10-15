@@ -53,6 +53,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+//RM 553793 - Anny Pereira
+//RM 552852 - Giovanna Makida
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
