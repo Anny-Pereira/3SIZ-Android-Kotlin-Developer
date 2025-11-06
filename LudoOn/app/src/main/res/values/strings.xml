@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LudoOn</string>
+    <string name="story_content_description" formatted="true">Story de %1$s</string>
+</resources>
