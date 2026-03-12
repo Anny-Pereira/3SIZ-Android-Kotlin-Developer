@@ -18,13 +18,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.provider.FontsContractCompat.Columns
 import com.rm553793.jokenpokemondemo.ui.components.PokemonLogo
 
 @Composable
-fun PlayerNameScreen(modifier: Modifier = Modifier) {
+fun PlayerNameScreen(
+    onStartGame: (String) -> Unit
+) {
 
+    //rebember - relembra o valor que foi armazeznado ali
     var playerName by remember { mutableStateOf("") }
 
     //criando componente
@@ -51,12 +55,19 @@ fun PlayerNameScreen(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(20.dp))
         Button(
             onClick = {
-                //onNavigateToGenerateNumber(input.toInt())
+                onStartGame(playerName)
             },
+            enabled = playerName.isNotEmpty(),
             modifier = Modifier
                 .fillMaxWidth()
         ) {
             Text("Iniciar Batalha")
         }
     }
+}
+
+@Preview
+@Composable
+private fun PlayerScreenPreview() {
+    PlayerNameScreen(){}
 }
