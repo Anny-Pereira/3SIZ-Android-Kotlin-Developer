@@ -36,7 +36,8 @@ fun AppNavigation() {
         ) {
 
             SplashScreen(
-                navController = navController
+                navController = navController,
+                preferenciasManager = preferenciasManager
             )
 
         }
